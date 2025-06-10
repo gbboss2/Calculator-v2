@@ -1,0 +1,196 @@
+$color-dark: #1C1A16;
+$color-medium: #25231D;
+$color-light: #36332B;
+$color-orange: #F2B200;
+$color-orange-faded: rgba(242, 178, 0, 0.11);
+$color-text-light: #E6DAB7;
+$border-thin: 0.0625rem solid $color-light;
+$padding-container: 2rem;
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin history-efects {
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+main {
+  @include flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  gap: 3rem;
+  background-color: $color-dark;
+  padding: 3rem;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.section {
+  width: 23.1rem;
+  min-width: 17rem;
+  background-color: $color-medium;
+  border: $border-thin;
+  border-radius: 1.875rem;
+}
+
+.calculator-container {
+  @include flex;
+  flex-direction: column;
+  padding: $padding-container;
+
+  .operation-display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 1.4375rem;
+    margin-bottom: 1.6rem;
+    width: 100%;
+    height: 2.8125rem;
+    background-color: $color-dark;
+    border: $border-thin;
+    color: $color-light;
+    padding-right: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    overflow: hidden;
+    color: $color-text-light;
+
+    &:hover {
+      border: 0.0625rem solid #7f7865;
+    }
+  }
+
+  .operator-buttons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5625rem;
+    width: 100%;
+  }
+}
+
+.glob-btn {
+  border-radius: 3.125rem;
+  height: 2.375rem;
+  font-size: 1rem;
+  font-weight: 400;
+  min-width: 2.8125rem;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    filter: brightness(1.5);
+  }
+}
+
+.dark {
+  color: $color-orange;
+  border: 0.0625rem solid rgba(242, 178, 0, 0.15);
+  background-color: transparent;
+}
+
+.opacity-orange {
+  background-color: $color-orange-faded;
+  color: $color-text-light;
+}
+
+.orange {
+  color: $color-medium;
+  background-color: $color-orange;
+}
+
+.history-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 23.125rem;
+
+  .padding-text {
+    display: flex;
+    flex-direction: column;
+    padding: $padding-container;
+    gap: 1.2rem;
+    overflow-y: auto;
+
+    .reusable-results {
+      display: flex;
+      justify-content: center;
+      font-size: 1rem;
+      color: $color-text-light;
+      width: 100%;
+    }
+  }
+
+  .down-container-history {
+    display: inline-flex;
+
+    .delete-btn {
+      color: $color-text-light;
+      border-radius: 0 0 0 1.875rem;
+    }
+
+    .save-btn {
+      border-radius: 0 0 1.875rem 0;
+      color: $color-orange;
+    }
+  }
+}
+
+.data-input-field {
+  display: flex;
+  align-items: center;
+  height: 2.8125rem;
+  border: $border-thin;
+  background: transparent;
+}
+
+.result {
+  border-radius: 0.68rem 0 0 0.68rem;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.pen-pics {
+  display: flex;
+  justify-content: center;
+  border-radius: 0 0.68rem 0.68rem 0;
+  aspect-ratio: 1 / 1;
+
+  & img {
+    width: 1.0625rem;
+    @include history-efects;
+  }
+}
+
+.down-array-styles {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+  width: 50%;
+  border: $border-thin;
+}
+
+.glob-down-btns {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  padding: 0 2rem;
+
+  @include history-efects;
+}

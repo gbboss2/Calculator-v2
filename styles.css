@@ -1,0 +1,175 @@
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  gap: 3rem;
+  background-color: #1C1A16;
+  padding: 3rem;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.section {
+  width: 23.1rem;
+  min-width: 17rem;
+  background-color: #25231D;
+  border: 0.0625rem solid #36332B;
+  border-radius: 1.875rem;
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+.calculator-container .operation-display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 1.4375rem;
+  margin-bottom: 1.6rem;
+  width: 100%;
+  height: 2.8125rem;
+  background-color: #1C1A16;
+  border: 0.0625rem solid #36332B;
+  color: #36332B;
+  padding-right: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  overflow: hidden;
+  color: #E6DAB7;
+}
+.calculator-container .operation-display:hover {
+  border: 0.0625rem solid #7f7865;
+}
+.calculator-container .operator-buttons-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5625rem;
+  width: 100%;
+}
+
+.glob-btn {
+  border-radius: 3.125rem;
+  height: 2.375rem;
+  font-size: 1rem;
+  font-weight: 400;
+  min-width: 2.8125rem;
+  cursor: pointer;
+  border: none;
+}
+.glob-btn:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+}
+.glob-btn:active {
+  filter: brightness(1.5);
+}
+
+.dark {
+  color: #F2B200;
+  border: 0.0625rem solid rgba(242, 178, 0, 0.15);
+  background-color: transparent;
+}
+
+.opacity-orange {
+  background-color: rgba(242, 178, 0, 0.11);
+  color: #E6DAB7;
+}
+
+.orange {
+  color: #25231D;
+  background-color: #F2B200;
+}
+
+.history-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 23.125rem;
+}
+.history-container .padding-text {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.2rem;
+  overflow-y: auto;
+}
+.history-container .padding-text .reusable-results {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  color: #E6DAB7;
+  width: 100%;
+}
+.history-container .down-container-history {
+  display: inline-flex;
+}
+.history-container .down-container-history .delete-btn {
+  color: #E6DAB7;
+  border-radius: 0 0 0 1.875rem;
+}
+.history-container .down-container-history .save-btn {
+  border-radius: 0 0 1.875rem 0;
+  color: #F2B200;
+}
+
+.data-input-field {
+  display: flex;
+  align-items: center;
+  height: 2.8125rem;
+  border: 0.0625rem solid #36332B;
+  background: transparent;
+}
+
+.result {
+  border-radius: 0.68rem 0 0 0.68rem;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.pen-pics {
+  display: flex;
+  justify-content: center;
+  border-radius: 0 0.68rem 0.68rem 0;
+  aspect-ratio: 1/1;
+}
+.pen-pics img {
+  width: 1.0625rem;
+}
+.pen-pics img:hover {
+  opacity: 0.6;
+}
+.pen-pics img:active {
+  opacity: 0.4;
+}
+
+.down-array-styles {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+  width: 50%;
+  border: 0.0625rem solid #36332B;
+}
+
+.glob-down-btns {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  padding: 0 2rem;
+}
+.glob-down-btns:hover {
+  opacity: 0.6;
+}
+.glob-down-btns:active {
+  opacity: 0.4;
+}/*# sourceMappingURL=styles.css.map */

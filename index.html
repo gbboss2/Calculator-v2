@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kalkulačka s historií výpočtů</title>
+</head>
+<body>
+
+<main>
+    <section class="section calculator-container">
+        <output class="operation-display" role="textbox" aria-readonly="true" aria-live="polite" aria-label="Current calculation"></output>
+        <div class="operator-buttons-container">
+            <button class="glob-btn dark" aria-label="Left parenthesis" onclick="calcFunc('(')">(</button>
+            <button class="glob-btn dark" aria-label="Right parenthesis" onclick="calcFunc(')')">)</button>
+            <button class="glob-btn dark" aria-label="Percentage" onclick="calcFunc('%')">%</button>
+            <button class="glob-btn dark" aria-label="Clear all" onclick="clearInput()">AC</button>
+
+            <button class="glob-btn opacity-orange" aria-label="Digit 7" onclick="calcFunc('7')">7</button>
+            <button class="glob-btn opacity-orange" aria-label="Digit 8" onclick="calcFunc('8')">8</button>
+            <button class="glob-btn opacity-orange" aria-label="Digit 9" onclick="calcFunc('9')">9</button>
+            <button class="glob-btn dark" aria-label="Divide" onclick="calcFunc('÷')">÷</button>
+
+            <button class="glob-btn opacity-orange" aria-label="Digit 4" onclick="calcFunc('4')">4</button>
+            <button class="glob-btn opacity-orange" aria-label="Digit 5" onclick="calcFunc('5')">5</button>
+            <button class="glob-btn opacity-orange" aria-label="Digit 6" onclick="calcFunc('6')">6</button>
+            <button class="glob-btn dark" aria-label="Multiply" onclick="calcFunc('×')">×</button>
+
+            <button class="glob-btn opacity-orange" aria-label="Digit 1" onclick="calcFunc('1')">1</button>
+            <button class="glob-btn opacity-orange" aria-label="Digit 2" onclick="calcFunc('2')">2</button>
+            <button class="glob-btn opacity-orange" aria-label="Digit 3" onclick="calcFunc('3')">3</button>
+            <button class="glob-btn dark" aria-label="Plus" onclick="calcFunc('+')">+</button>
+
+            <button class="glob-btn opacity-orange" aria-label="Digit 0" onclick="calcFunc('0')">0</button>
+            <button class="glob-btn opacity-orange" aria-label="Decimal comma" onclick="calcFunc('.')">.</button>
+            <button class="glob-btn orange" aria-label="Equals" onclick="calsFuncEqual()">=</button>
+            <button class="glob-btn dark" aria-label="Minus" onclick="calcFunc('-')">-</button>
+
+        </div>
+    </section>
+
+    <section class="section history-container">
+
+        <div class="padding-text">
+
+            <!-- výsledek s tlačítkem -->
+            <!--             <div class="reusable-results">
+                            <div class="data-input-field result">
+                                <p>2.33</p>
+                            </div>
+                            <div class="data-input-field pen-pics">
+                                <img title="Použít znovu jako výsledek" src="/pics/pen.svg" alt="reuse-the-result">
+                            </div>
+                        </div> -->
+            <!-- výsledek s tlačítkem -->
+
+        </div>
+
+        <div class="down-container-history">
+            <div class="down-array-styles delete-btn" aria-label="Delete history">
+                <button  onclick="clearFunc()" title="Vymazat všechnu historii výsledků" class="glob-down-btns">
+                    <img src="/pics/delete.svg" alt="clear-result-history">
+                    <p>Delete</p>
+                </button>
+            </div>
+            <div class="down-array-styles save-btn" aria-label="Save history">
+                <button onclick="saveFunc()" title="Uložit všechnu historii výsledků" class="glob-down-btns">
+                    <img src="/pics/save.svg" alt="save-results-history">
+                    <p>Save</p>
+                </button>
+            </div>
+        </div>
+                
+    </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjs/lib/browser/math.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>
